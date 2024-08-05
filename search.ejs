@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Search Term: <%= searchTerm %></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Feedback ID</th>
+                <th>Name</th>
+                <th>Favorite Ice Cream</th>
+                <th>Rating</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% rows.forEach(row => { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.favoriteIceCream %></td>
+                    <td><%= row.rating %></td>
+                    <td><%= row.feedback %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
